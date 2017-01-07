@@ -1,2 +1,2 @@
 # petclinic-docker-image
-Docker Image for Spring's Petclinic Application
+This is a Docker Image for Spring's Petclinic Application
