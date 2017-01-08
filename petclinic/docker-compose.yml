@@ -1,6 +1,6 @@
 mysql:
-  image: mysql
   container_name: mysql
+  build: mysql/.
   ports:
     - "3306:3306"
   environment:
@@ -8,9 +8,9 @@ mysql:
     - MYSQL_DATABASE=petclinic
     - MYSQL_USER=petclinic
     - MYSQL_PASSWORD=petclinic
-petclinic:
-  image: spring-petclinic:1.4.2
-  container_name: petclinic
+spring:
+  container_name: spring
+  build: spring/.
   links:
     - "mysql:dbhost"
   ports:
